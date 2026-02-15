@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Tattoo Needle Taper Visualizer | Poli International</title>
+    <meta name="description" content="Professional needle taper visualizer for tattoo artists. Compare short, medium, and long tapers and understand their impact on dermal tissue.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- IFRAME CONTENT HIDER -->
+    <script>
+    (function() {
+        'use strict';
+        if (window.self !== window.top) {
+            var style = document.createElement('style');
+            style.textContent = `
+                header, footer, .site-header, .site-footer, .breadcrumb-nav, 
+                .tool-discovery-map, .more-tools-section, .feedback-section, 
+                .related-tools-section, .geo-summary-block, .share-card, 
+                .need-support-card, .explore-all-card, #dark-toggle, 
+                .poli-footer, .poli-global-footer, .tool-standard-breadcrumbs,
+                .feedback-form-section, .email-section, .geo-authority-block { 
+                    display: none !important; 
+                    visibility: hidden !important; 
+                    height: 0 !important;
+                    overflow: hidden !important;
+                } 
+                body { padding: 0 !important; margin: 0 !important; background: transparent !important; }
+            `;
+            document.head.appendChild(style);
+        }
+    })();
+    </script>
+</head>
+<body class="dark-mode">
+
+    <!-- STANDARD HEADER -->
+    <header class="site-header">
+        <div class="container site-header__container">
+            <div class="site-header__logo-container">
+                <img src="images/Poli-International-Co.webp" alt="Poli International" class="site-header__logo">
+            </div>
+            <div class="site-header__title-group">
+                <h2 class="site-header__title">Needle Taper Visualizer</h2>
+                <p class="site-header__subtitle">Precision Dermal Dynamics Calibration</p>
+            </div>
+            <div class="site-header__actions">
+                <button id="embedBtn" class="btn btn--primary btn--small">
+                    <span class="embed-icon">⚡</span>
+                    <span class="embed-text">Free Embed</span>
+                </button>
+                <a href='https://ko-fi.com/patrickkofi' target='_blank' class="btn btn--secondary btn--small kofi-button">
+                    <span class="kofi-icon">☕</span>
+                    <span class="kofi-text">Support innovation</span>
+                </a>
+                <button id="darkModeToggle" class="btn btn--icon" aria-label="Toggle dark mode">
+                    <span class="dark-mode-icon">◐</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="taper-engine">
+        <div class="container">
+            <div class="taper-layout">
+                <!-- Control Panel -->
+                <aside class="control-panel">
+                    <div class="control-section">
+                        <h3>Taper Configuration</h3>
+                        <div class="taper-selector">
+                            <button class="taper-btn active" data-taper="short">
+                                <span class="taper-label">Short Taper (ST)</span>
+                                <span class="taper-val">1.5mm</span>
+                            </button>
+                            <button class="taper-btn" data-taper="medium">
+                                <span class="taper-label">Medium Taper (MT)</span>
+                                <span class="taper-val">2.5mm</span>
+                            </button>
+                            <button class="taper-btn" data-taper="long">
+                                <span class="taper-label">Long Taper (LT)</span>
+                                <span class="taper-val">6.0mm</span>
+                            </button>
+                            <button class="taper-btn" data-taper="extra">
+                                <span class="taper-label">Extra Long (ELT)</span>
+                                <span class="taper-val">8.0mm</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="control-section">
+                        <h3>Needle Gauge</h3>
+                        <select id="needle-gauge" class="form-select">
+                            <option value="0.25">#08 (0.25mm) - Bugpin</option>
+                            <option value="0.30">#10 (0.30mm) - Double Zero</option>
+                            <option value="0.35" selected>#12 (0.35mm) - Standard</option>
+                        </select>
+                    </div>
+
+                    <div class="control-section">
+                        <h3>Anatomical Depth</h3>
+                        <input type="range" id="penetration-depth" min="0.5" max="2.5" step="0.1" value="1.5" class="range-input">
+                        <div class="range-labels">
+                            <span>0.5mm</span>
+                            <span id="depth-val">1.5mm</span>
+                            <span>2.5mm</span>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Visualization Area -->
+                <section class="visualizer-stage">
+                    <div class="canvas-container">
+                        <svg id="taper-svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid meet">
+                            <!-- Skin Layers -->
+                            <rect class="skin-epidermis" x="0" y="300" width="800" height="40"></rect>
+                            <rect class="skin-dermis" x="0" y="340" width="800" height="160"></rect>
+                            
+                            <text x="10" y="325" class="layer-label">EPIDERMIS</text>
+                            <text x="10" y="365" class="layer-label">DERMIS (Target)</text>
+
+                            <!-- Needle Geometry -->
+                            <g id="needle-group">
+                                <path id="needle-taper" class="needle-outline" d=""></path>
+                                <rect id="needle-shaft" class="needle-outline" x="380" y="-500" width="40" height="500"></rect>
+                                
+                                <!-- Impact Zone -->
+                                <circle id="impact-glow" cx="400" cy="300" r="10" class="impact-glow"></circle>
+                            </g>
+
+                            <!-- Measurements -->
+                            <line id="taper-measure" x1="430" y="0" x2="430" y1="0" y2="0" class="measure-line"></line>
+                            <text id="taper-measure-text" x="440" y="0" class="measure-text">Taper: 3.5mm</text>
+                        </svg>
+                    </div>
+
+                    <div class="analysis-grid">
+                        <div class="analysis-card">
+                            <span class="analysis-label">Trauma Rating</span>
+                            <div class="rating-bar">
+                                <div id="trauma-fill" class="rating-fill trauma-high" style="width: 80%"></div>
+                            </div>
+                            <span id="trauma-text" class="analysis-val">Significant Impact</span>
+                        </div>
+                        <div class="analysis-card">
+                            <span class="analysis-label">Pigment Delivery</span>
+                            <div class="rating-bar">
+                                <div id="ink-fill" class="rating-fill ink-optimal" style="width: 90%"></div>
+                            </div>
+                            <span id="ink-text" class="analysis-val">Maximum Saturation</span>
+                        </div>
+                        <div class="analysis-card">
+                            <span class="analysis-label">Best Use</span>
+                            <span id="best-use-text" class="analysis-val-text">Solid Color / Traditional</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- STANDARD FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="site-footer__content">
+                <div class="site-footer__brand">
+                    <img src="images/Poli-International-Co.webp" alt="Poli International" class="site-footer__logo">
+                    <p class="site-footer__tagline">Engineering Excellence in Body Art Hardware</p>
+                </div>
+                <div class="site-footer__support">
+                    <p class="support-text">Enjoying this professional tool? Support our innovation.</p>
+                    <a href="https://ko-fi.com/patrickkofi" target="_blank">
+                        <img src="https://storage.ko-fi.com/cdn/kofi6.png?v=6" alt="Buy Me a Coffee" height="50">
+                    </a>
+                </div>
+            </div>
+            <div class="site-footer__bottom">
+                <p class="copyright">© 2026 Poli International Ltd. | Professional Use Only</p>
+                <p class="disclaimer">⚠️ TECHNICAL REFERENCE: Taper lengths are approximate and vary by manufacturer. This tool assumes a standard conical grind geometry.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- EMBED MODAL -->
+    <div id="embedModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">🎁 Use This Tool FREE on Your Website!</h2>
+                <span class="modal-close" id="modalClose">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p class="modal-description">Embed this professional needle taper visualizer on your studio site - completely free!</p>
+
+                <div class="modal-section">
+                    <h3 class="modal-section-title">📋 Copy Embed Code</h3>
+                    <div class="code-container">
+                        <textarea id="embedCode" class="embed-code-textarea" readonly></textarea>
+                        <button id="copyEmbedCode" class="btn btn--primary btn--small">📋 Copy Code</button>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3 class="modal-section-title">💾 Download or Explore</h3>
+                    <div class="btn-group">
+                        <a href="embed.html" download class="btn btn--secondary">⬇️ Download HTML</a>
+                        <a href="https://poliinternational.com/tools" target="_blank" class="btn btn--primary">🔗 More Free Tools</a>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3 class="modal-section-title">🔔 Get Notified of New Tools!</h3>
+                    <form id="modal-email-form" class="email-form" data-location="modal">
+                        <div class="email-input-group">
+                            <input type="email" class="email-input" placeholder="Your email address" required>
+                            <button type="submit" class="btn btn--primary">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/database.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>
