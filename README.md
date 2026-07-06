@@ -1,117 +1,87 @@
-# Tattoo Needle Taper Visualizer
+# Needle Taper Visualizer
 
-> **Interactive dermal dynamics guide for comparing tattoo needle taper lengths and impact.**
+> **See how long vs short needle taper affects ink flow, trauma, and blowout risk. Interactive model of dermal layer interaction. Free tool.**
 
 [![License](https://img.shields.io/github/license/Poli-International/needle-taper-visualizer)](LICENSE)
 [![Last Commit](https://img.shields.io/github/last-commit/Poli-International/needle-taper-visualizer)](https://github.com/Poli-International/needle-taper-visualizer/commits/main)
 [![GitHub Stars](https://img.shields.io/github/stars/Poli-International/needle-taper-visualizer?style=social)](https://github.com/Poli-International/needle-taper-visualizer/stargazers)
 
-**Live Tool:** [https://poliinternational.com/needle-taper-visualizer/](https://poliinternational.com/needle-taper-visualizer/)
+**Live Demo:** [https://poliinternational.com/tools/needle-taper-visualizer/](https://poliinternational.com/tools/needle-taper-visualizer/)
 
 ---
 
-## 📋 Overview
+## 🎯 Overview
 
-The **Tattoo Needle Taper Visualizer** is a professional calibration tool designed to help artists understand the relationship between needle geometry and dermal trauma. By visualizing how different conical grinds interact with the epidermis and dermis, artists can make informed decisions on tool selection for specific techniques.
+See how long vs short needle taper affects ink flow, trauma, and blowout risk. Interactive model of dermal layer interaction. Free tool.
 
-### Key Features
+**Category:** Tattoo Engineering
 
-1. **📏 Conical Geometry Engine**
-   - Interactive SVG visualization of Short (1.5mm) to Extra Long (8.0mm) tapers.
-   - Dynamic scaling based on needle gauge (#08, #10, #12).
-   - Adjustable penetration depth to simulate actual procedural conditions.
-
-2. **🩸 Trauma & Saturation Analysis**
-   - **Trauma Rating:** Real-time estimation of surface area displacement and tissue resistance.
-   - **Pigment Delivery:** Analysis of ink flow efficiency based on taper surface area.
-   - **Best Use Recommendations:** Technical mapping to styles like Traditional, Realism, and Fine Line.
-
-3. **🔬 Layered Anatomy View**
-   - Cross-section visualization of the Epidermis and Dermis layers.
-   - Precision measurement lines showing the exact length of the conical grind.
+This is a free, open-source widget from the [Poli International Widget Suite](https://poliinternational.com/tools/) - a collection of practical tools for tattoo and piercing studios, artists, and clients. It runs entirely in the browser; no data is sent to a server.
 
 ---
 
-## 🔧 Technical Logic & Algorithms
+## ✨ Features
 
-### Taper Dynamics Model
-
-The tool simulates conical geometry using the standard conical grind formula:
-
-```javascript
-taperAngle = atan((gauge / 2) / taperLength)
-impactArea = π * (gauge / 2)^2 / cos(taperAngle)
-traumaLevel = f(impactArea, depth)
-```
-
-#### Taper Standard Profiles
-
-| Profile | Length | Trauma | Saturation | Best Use |
-| :--- | :--- | :--- | :--- | :--- |
-| **Short (ST)** | 1.5mm | High | Maximum | Solid Color |
-| **Medium (MT)**| 2.5mm | Medium | High | General |
-| **Long (LT)**  | 6.0mm | Low | Controlled | Fine Line |
-| **Extra (ELT)**| 8.0mm | Minimal | Precise | Hyper-Realism |
+- ✅ **Needle Taper Visualizer**
+- ✅ **Tattoo Needle Geometry**
+- ✅ **Needle Taper Angle**
+- ✅ **Responsive Design** - works on desktop, tablet, and mobile.
+- ✅ **Free & Open Source** - MIT licensed.
 
 ---
 
-## 📁 File Structure
+## 🎬 Demo
 
-```
-needle-taper-visualizer/
-├── index.html              # Technical interface
-├── css/
-│   └── style.css          # Streetwise Dark aesthetic
-├── js/
-│   ├── database.js        # Taper profile data
-│   ├── main.js            # SVG geometry engine
-│   └── common.js          # Unified theme logic
-└── images/
-    └── Poli-International-Co.webp  # Brand Identity
+### Try It Live
+
+**👉 [Use the tool now](https://poliinternational.com/tools/needle-taper-visualizer/)**
+
+---
+
+## 🚀 Installation
+
+### Option 1: Use Online (Recommended)
+
+No installation needed! Just visit:
+**[https://poliinternational.com/tools/needle-taper-visualizer/](https://poliinternational.com/tools/needle-taper-visualizer/)**
+
+### Option 2: Run Locally
+
+This tool is pure HTML/CSS/JS - no build step. Clone the repo and open `index.html`:
+
+```bash
+git clone https://github.com/Poli-International/needle-taper-visualizer.git
+cd needle-taper-visualizer
+# open index.html in your browser
 ```
 
 ---
 
-## 🚀 Deployment & Usage
+## 🤝 Contributing
 
-### Live Production
-This tool is integrated into the Poli International ecosystem via the **Poli Core System**. It features full synchronization with the site-wide dark mode and scientific wiki links.
-
-### Standalone Embed
-To use this tool on your own studio website, use the following iframe:
-
-```html
-<iframe src="https://poliinternational.com/wp-content/standalone-tools/needle-taper-visualizer/index.html" 
-        width="100%" 
-        height="1200" 
-        frameborder="0" 
-        style="border-radius: 12px; border: 1px solid #333;">
-</iframe>
-```
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
 
 ---
 
-## 🎨 Branding & Standards
+## 📄 License
 
-- **Theme:** Streetwise Dark Mode (Primary: #0693e3, Accent: #9b51e0)
-- **Naming:** BEM (Block Element Modifier)
-- **SEO Keywords:** Tattoo needle taper, short taper vs long taper, bugpin needles, tattoo needle geometry, dermal trauma, needle physics.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 👨‍💻 Credits
+## 💬 Support
 
-**Built by:** Claude Code Agent System (opencode)
-**Client:** Poli International
-**Scientific Foundation:** [Needle Geometry & Dermal Physics Wiki](https://poliinternational.com/wp-content/standalone-tools/standards/needle-geometry-physics.html)
+### Get Help
 
----
-
-## 📧 Contact & Support
-
-**Technical Support:** [patrick@poli-international.com](mailto:patrick@poli-international.com)
-**Support Innovation:** [Buy Me a Coffee](https://ko-fi.com/patrickkofi)
+- 📧 **Email**: <support@poliinternational.com>
+- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/Poli-International/needle-taper-visualizer/issues)
 
 ---
 
-© 2026 Poli International Ltd. | Precision Engineering for the Body Art Industry.
+<div align="center">
+
+**Made with ❤️ by [Poli International](https://poliinternational.com)**
+
+[Website](https://poliinternational.com) • [Tools](https://poliinternational.com/tools/) • [GitHub](https://github.com/Poli-International)
+
+</div>
