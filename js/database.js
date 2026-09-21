@@ -1,38 +1,56 @@
-const TAPER_DATABASE = {
+/**
+ * Needle Taper Visualizer - Database V2
+ * Conical taper dimensional specifications and qualitative dermal dynamics.
+ * Taper lengths represent standard industry manufacturing references.
+ */
+
+window.TAPER_DATABASE = {
     short: {
-        name: "Short Taper (ST)",
+        id: "short",
+        name_key: "controls.short_taper",
         length_mm: 1.5,
-        description: "Large impact surface area. High trauma but high pigment delivery.",
-        trauma: 85,
-        saturation: 95,
-        best_use: "Solid Color / Bold Traditional",
-        grind: "Short conical grind"
+        trauma_level: "high", // 'high' | 'medium' | 'low'
+        trauma_level_key: "analysis.trauma_level_high",
+        trauma_desc_key: "analysis.trauma_desc_high",
+        ink_level: "high",    // 'high' | 'medium' | 'low'
+        ink_level_key: "analysis.ink_level_high",
+        ink_desc_key: "analysis.ink_desc_high",
+        tendency_key: "analysis.tendency_short"
     },
     medium: {
-        name: "Medium Taper (MT)",
+        id: "medium",
+        name_key: "controls.medium_taper",
         length_mm: 2.5,
-        description: "Versatile standard. Balanced trauma and pigment retention.",
-        trauma: 55,
-        saturation: 80,
-        best_use: "Linework / General Shading",
-        grind: "Standard industrial grind"
+        trauma_level: "medium",
+        trauma_level_key: "analysis.trauma_level_medium",
+        trauma_desc_key: "analysis.trauma_desc_medium",
+        ink_level: "medium",
+        ink_level_key: "analysis.ink_level_medium",
+        ink_desc_key: "analysis.ink_desc_medium",
+        tendency_key: "analysis.tendency_medium"
     },
     long: {
-        name: "Long Taper (LT)",
+        id: "long",
+        name_key: "controls.long_taper",
         length_mm: 6.0,
-        description: "Small impact surface. Low trauma, precise pigment placement.",
-        trauma: 25,
-        saturation: 65,
-        best_use: "Fine Line / Realism",
-        grind: "Long precision grind"
+        trauma_level: "low",
+        trauma_level_key: "analysis.trauma_level_low",
+        trauma_desc_key: "analysis.trauma_desc_low",
+        ink_level: "low",
+        ink_level_key: "analysis.ink_level_low",
+        ink_desc_key: "analysis.ink_desc_low",
+        tendency_key: "analysis.tendency_long"
     },
     extra: {
-        name: "Extra Long (ELT)",
+        id: "extra",
+        name_key: "controls.extra_taper",
         length_mm: 8.0,
-        description: "Surgical precision. Minimal trauma, ideal for delicate layers.",
-        trauma: 15,
-        saturation: 50,
-        best_use: "Hyper-Realism / Soft Wash",
-        grind: "Extreme conical taper"
+        trauma_level: "low",
+        trauma_level_key: "analysis.trauma_level_low",
+        trauma_desc_key: "analysis.trauma_desc_low",
+        ink_level: "low",
+        ink_level_key: "analysis.ink_level_low",
+        ink_desc_key: "analysis.ink_desc_low",
+        tendency_key: "analysis.tendency_extra"
     }
 };
