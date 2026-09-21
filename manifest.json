@@ -1,0 +1,17 @@
+{
+  "name": "Needle Taper Visualizer",
+  "short_name": "Taper Visualizer",
+  "description": "Interactive needle taper visualizer for tattoo artists to compare taper lengths, penetration depth, dermal layer interaction, and pigment delivery.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b0f17",
+  "theme_color": "#0b0f17",
+  "icons": [
+    {
+      "src": "./images/Poli-International-Co.webp",
+      "sizes": "192x192 512x512",
+      "type": "image/webp"
+    }
+  ]
+}
