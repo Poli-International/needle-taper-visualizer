@@ -662,6 +662,100 @@ window.I18N = {
         "modal.copy_btn": "Copiar o código",
         "modal.copied_btn": "Copiado!",
         "modal.more_tools": "Explorar mais ferramentas gratuitas"
+    },
+    th: {
+        // App
+        "app.title": "Needle Taper Visualizer",
+        "app.subtitle": "เทเปอร์ทรงกรวยและพลศาสตร์ของหนังแท้",
+
+        // Header
+        "header.logo_alt": "Poli International",
+        "header.language_select": "การเลือกภาษา",
+        "header.lang_en": "อังกฤษ (EN)",
+        "header.lang_es": "สเปน (ES)",
+        "header.lang_fr": "ฝรั่งเศส (FR)",
+        "header.lang_de": "เยอรมัน (DE)",
+        "header.lang_it": "อิตาลี (IT)",
+        "header.lang_pt": "โปรตุเกส (PT)",
+        "header.lang_nl": "ดัตช์ (NL)",
+        "header.embed": "ฝังเครื่องมือ",
+        "header.theme_toggle": "สลับโหมดมืด",
+
+        // Controls
+        "controls.panel_aria": "ตัวควบคุมการกำหนดค่า",
+        "controls.taper_title": "การกำหนดค่าเทเปอร์",
+        "controls.taper_select_aria": "การเลือกเทเปอร์",
+        "controls.short_taper": "เทเปอร์สั้น (ST)",
+        "controls.medium_taper": "เทเปอร์ระดับกลาง (MT)",
+        "controls.long_taper": "เทเปอร์ยาว (LT)",
+        "controls.extra_taper": "ยาวพิเศษ (ELT)",
+        "controls.gauge_title": "เกจ์เข็ม",
+        "controls.visual_only_badge": "ภาพประกอบเท่านั้น",
+        "controls.gauge_note": "ปรับความหนาของเข็มในภาพตัดขวางของแผนภาพ",
+        "controls.gauge_08": "#08 (0.25mm) - บักพิน",
+        "controls.gauge_10": "#10 (0.30mm) - ดับเบิลซีโร่",
+        "controls.gauge_12": "#12 (0.35mm) - มาตรฐาน",
+        "controls.depth_title": "ความลึกทางกายวิภาค",
+        "controls.depth_note": "ปรับความลึกการแทงเข็มในแผนภาพ",
+        "controls.depth_slider_aria": "ความลึกการแทงทางกายวิภาค",
+
+        // Stage & SVG
+        "stage.stage_aria": "ขั้นตอนการแสดงผล",
+        "svg.diagram_aria": "แผนภาพปฏิสัมพันธ์ระหว่างเทเปอร์ของเข็มและชั้นผิวหนังแท้",
+        "svg.epidermis": "หนังกำพร้า",
+        "svg.dermis": "หนังแท้ (ชั้นเป้าหมาย)",
+        "svg.taper_measure": "เทเปอร์: {length} mm",
+
+        // Analysis
+        "analysis.trauma_title": "แนวโน้มการบาดเจ็บของเนื้อเยื่อ",
+        "analysis.trauma_meter_aria": "มาตรวัดระดับการบาดเจ็บ",
+        "analysis.trauma_level_high": "สูง",
+        "analysis.trauma_desc_high": "เส้นผ่านศูนย์กลางของรูแทงทรงกรวยที่ใหญ่ขึ้นเมื่อเข็มแทงผ่านผิว",
+        "analysis.trauma_level_medium": "ระดับกลาง",
+        "analysis.trauma_desc_medium": "เส้นผ่านศูนย์กลางของรูแทงขณะเข้าอยู่ในระดับสมดุล",
+        "analysis.trauma_level_low": "ต่ำ",
+        "analysis.trauma_desc_low": "รูปทรงกรวยเรียวบางทำให้พื้นที่รูแทงเล็กลง",
+        "analysis.ink_title": "แนวโน้มการส่งผ่านเม็ดสี",
+        "analysis.ink_meter_aria": "มาตรวัดการส่งผ่านเม็ดสี",
+        "analysis.ink_level_high": "สูง",
+        "analysis.ink_desc_high": "หมึกถูกส่งเข้าผิวอย่างรวดเร็วในแต่ละรอบการแทง",
+        "analysis.ink_level_medium": "ปานกลาง",
+        "analysis.ink_desc_medium": "การส่งหมึกสม่ำเสมอและควบคุมได้",
+        "analysis.ink_level_low": "ควบคุมได้",
+        "analysis.ink_desc_low": "การส่งหมึกละเอียดและค่อยเป็นค่อยไป เหมาะสำหรับการไล่โทนสี",
+        "analysis.tendency_title": "แนวโน้มการใช้งาน",
+        "analysis.tendency_short": "มักเลือกใช้สำหรับการอัดสีทึบและเส้นแบบดั้งเดิมที่หนักแน่น เมื่อต้องการความเข้มของสีที่หนาแน่น",
+        "analysis.tendency_medium": "เลือกใช้บ่อยสำหรับงานเส้นทั่วไป การลงเงาหลากหลาย และขั้นตอนการทำงานในสตูดิโอโดยรวม",
+        "analysis.tendency_long": "มักเลือกใช้สำหรับรายละเอียดเส้นบาง การไล่เฉดดำและเทาที่เรียบเนียน และพื้นผิวที่สมจริง",
+        "analysis.tendency_extra": "มักใช้สำหรับงานสมจริงสุดขีด การลงเงาแบบวอชที่นุ่มนวล และการซ้อนหลายรอบอย่างประณีต",
+
+        // Related Studio Tools
+        "related.title": "เครื่องมือสตูดิโอที่เกี่ยวข้อง",
+        "related.voltage_text": "สำหรับความเร็วเข็ม พลศาสตร์การเคลื่อนที่ และการปรับเทียบแรงดันไฟ:",
+        "related.voltage_link": "เครื่องมือกำหนดค่าแรงดันเครื่อง (Machine Voltage Configurator)",
+        "related.grouping_text": "สำหรับการเลือกการกำหนดค่า เส้นผ่านศูนย์กลาง และการจัดกลุ่มเข็ม:",
+        "related.grouping_link": "ตัวเลือกเข็มสัก",
+
+        // Print Reference
+        "print.header_title": "Needle Taper Visualizer: เอกสารอ้างอิงทางเทคนิค",
+        "print.header_subtitle": "Poli International: อุปกรณ์งานศิลปะบนร่างกายความแม่นยำสูงและเครื่องมือสตูดิโอ (poliinternational.com)",
+        "print.footer_text": "© 2026 Poli International Ltd.: คู่มืออ้างอิงทางเทคนิคเรื่องเทเปอร์ทรงกรวย (poliinternational.com)",
+
+        // Footer
+        "footer.logo_alt": "Poli International",
+        "footer.tagline": "Poli International: อุปกรณ์งานศิลปะบนร่างกายความแม่นยำสูงและเครื่องมือสตูดิโอ",
+        "footer.disclaimer": "เอกสารอ้างอิงทางเทคนิค: ความยาวของเทเปอร์เป็นค่าอ้างอิงมาตรฐานการผลิตโดยประมาณ พลศาสตร์การแทงจริงขึ้นอยู่กับความเร็วของมือ ระยะชักของเครื่อง และความตึงของผิวหนัง",
+        "footer.copyright": "© 2026 Poli International Ltd.",
+
+        // Embed Modal
+        "modal.title": "ฝังตัวแสดงผลนี้",
+        "modal.close": "ปิด",
+        "modal.desc": "ฝังตัวแสดงผลเทเปอร์ของเข็มนี้บนเว็บไซต์หรือพอร์ทัลของสตูดิโอคุณได้ฟรี",
+        "modal.code_label": "โค้ดฝัง",
+        "modal.code_aria": "โค้ดฝัง",
+        "modal.copy_btn": "คัดลอกโค้ด",
+        "modal.copied_btn": "คัดลอกแล้ว!",
+        "modal.more_tools": "สำรวจเครื่องมือฟรีเพิ่มเติม"
     }
 };
 
