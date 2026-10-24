@@ -1,7 +1,7 @@
 /**
  * Needle Taper Visualizer - Database V2
  * Conical taper dimensional specifications and qualitative dermal dynamics.
- * Taper lengths represent standard industry manufacturing references.
+ * Taper lengths are typical examples; there is no industry standard (lengths per name vary by brand).
  */
 
 window.TAPER_DATABASE = {
