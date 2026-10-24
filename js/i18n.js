@@ -86,7 +86,7 @@ window.I18N = {
         // Footer
         "footer.logo_alt": "Poli International",
         "footer.tagline": "Poli International: Precision Body Art Hardware & Studio Tools",
-        "footer.disclaimer": "Technical Reference: Taper lengths are approximate standard manufacturing references. Actual puncture dynamics vary by hand speed, machine stroke, and skin tension.",
+        "footer.disclaimer": "Technical Reference: Taper lengths are typical examples. There is no industry standard: brands give the same name to different lengths, so check the box. Actual puncture dynamics vary by hand speed, machine stroke, and skin tension.",
         "footer.copyright": "© 2026 Poli International Ltd.",
 
         // Embed Modal
@@ -180,7 +180,7 @@ window.I18N = {
         // Footer
         "footer.logo_alt": "Poli International",
         "footer.tagline": "Poli International : Matériel de précision pour le body art et outils d'atelier",
-        "footer.disclaimer": "Référence technique : Les longueurs de cône sont des repères de fabrication standards approximatifs. La dynamique réelle de pénétration varie selon la vitesse de déplacement, le débattement de la machine et la tension cutanée.",
+        "footer.disclaimer": "Référence technique : Les longueurs de cône sont des exemples courants. Il n’existe pas de norme du secteur : les marques donnent le même nom à des longueurs différentes, vérifiez la boîte. La dynamique réelle de pénétration varie selon la vitesse de déplacement, le débattement de la machine et la tension cutanée.",
         "footer.copyright": "© 2026 Poli International Ltd.",
 
         // Embed Modal
@@ -274,7 +274,7 @@ window.I18N = {
         // Footer
         "footer.logo_alt": "Poli International",
         "footer.tagline": "Poli International: Attrezzature di precisione per body art e strumenti per lo studio",
-        "footer.disclaimer": "Riferimento tecnico: Le lunghezze della conicità sono indicazioni standard approssimative di produzione. Le dinamiche reali di penetrazione variano in base alla velocità della mano, alla corsa della macchinetta e alla tensione cutanea.",
+        "footer.disclaimer": "Riferimento tecnico: Le lunghezze della conicità sono esempi tipici. Non esiste uno standard di settore: i marchi danno lo stesso nome a lunghezze diverse, quindi controllate la confezione. Le dinamiche reali di penetrazione variano in base alla velocità della mano, alla corsa della macchinetta e alla tensione cutanea.",
         "footer.copyright": "© 2026 Poli International Ltd.",
 
         // Embed Modal
@@ -368,7 +368,7 @@ window.I18N = {
         // Footer
         "footer.logo_alt": "Poli International",
         "footer.tagline": "Poli International: Präzisions-Hardware für Body Art & Studio-Tools",
-        "footer.disclaimer": "Technische Referenz: Die Konuslängen sind ungefähre Standard-Herstellerangaben. Die tatsächliche Einstichdynamik variiert je nach Handgeschwindigkeit, Maschinenhub und Hautspannung.",
+        "footer.disclaimer": "Technische Referenz: Die Konuslängen sind typische Beispiele. Es gibt keinen Branchenstandard: Hersteller geben unterschiedlichen Längen denselben Namen, prüfen Sie daher die Verpackung. Die tatsächliche Einstichdynamik variiert je nach Handgeschwindigkeit, Maschinenhub und Hautspannung.",
         "footer.copyright": "© 2026 Poli International Ltd.",
 
         // Embed Modal
@@ -462,7 +462,7 @@ window.I18N = {
         // Footer
         "footer.logo_alt": "Poli International",
         "footer.tagline": "Poli International: Hardware de precisión para body art y herramientas de estudio",
-        "footer.disclaimer": "Referencia técnica: Las longitudes de conicidad son aproximaciones estándar de los fabricantes. La dinámica real de punción varía según la velocidad de la mano, el recorrido de la máquina y la tensión de la piel.",
+        "footer.disclaimer": "Referencia técnica: Las longitudes de conicidad son ejemplos habituales. No existe un estándar del sector: las marcas dan el mismo nombre a longitudes distintas, así que revise la caja. La dinámica real de punción varía según la velocidad de la mano, el recorrido de la máquina y la tensión de la piel.",
         "footer.copyright": "© 2026 Poli International Ltd.",
 
         // Embed Modal
@@ -556,7 +556,7 @@ window.I18N = {
         // Footer
         "footer.logo_alt": "Poli International",
         "footer.tagline": "Poli International: Precisie body-art hardware & studio-tools",
-        "footer.disclaimer": "Technische referentie: Conuslengtes zijn indicatieve productienormen. De werkelijke penetratiedynamiek hangt af van handtempo, machineslag en huidspanning.",
+        "footer.disclaimer": "Technische referentie: Conuslengtes zijn gangbare voorbeelden. Er bestaat geen branchenorm: merken geven dezelfde naam aan verschillende lengtes, dus controleer de verpakking. De werkelijke penetratiedynamiek hangt af van handtempo, machineslag en huidspanning.",
         "footer.copyright": "© 2026 Poli International Ltd.",
 
         // Embed Modal
@@ -650,7 +650,7 @@ window.I18N = {
         // Footer
         "footer.logo_alt": "Poli International",
         "footer.tagline": "Poli International: Equipamento de precisão para body art e ferramentas de estúdio",
-        "footer.disclaimer": "Referência técnica: Os comprimentos de conicidade são referências de fabrico aproximadas. A dinâmica real de punção varia com a velocidade da mão, o curso da máquina e a tensão da pele.",
+        "footer.disclaimer": "Referência técnica: Os comprimentos de conicidade são exemplos habituais. Não existe uma norma do setor: as marcas dão o mesmo nome a comprimentos diferentes, por isso verifique a caixa. A dinâmica real de punção varia com a velocidade da mão, o curso da máquina e a tensão da pele.",
         "footer.copyright": "© 2026 Poli International Ltd.",
 
         // Embed Modal
@@ -744,7 +744,7 @@ window.I18N = {
         // Footer
         "footer.logo_alt": "Poli International",
         "footer.tagline": "Poli International: อุปกรณ์งานศิลปะบนร่างกายความแม่นยำสูงและเครื่องมือสตูดิโอ",
-        "footer.disclaimer": "เอกสารอ้างอิงทางเทคนิค: ความยาวของเทเปอร์เป็นค่าอ้างอิงมาตรฐานการผลิตโดยประมาณ พลศาสตร์การแทงจริงขึ้นอยู่กับความเร็วของมือ ระยะชักของเครื่อง และความตึงของผิวหนัง",
+        "footer.disclaimer": "เอกสารอ้างอิงทางเทคนิค: ความยาวของเทเปอร์เป็นเพียงตัวอย่างที่พบบ่อย ไม่มีมาตรฐานกลางของอุตสาหกรรม แต่ละแบรนด์ใช้ชื่อเดียวกันกับความยาวต่างกัน จึงควรดูที่กล่อง พลศาสตร์การแทงจริงขึ้นอยู่กับความเร็วของมือ ระยะชักของเครื่อง และความตึงของผิวหนัง",
         "footer.copyright": "© 2026 Poli International Ltd.",
 
         // Embed Modal
